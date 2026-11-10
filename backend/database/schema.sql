@@ -1,0 +1,15 @@
+-- La estructura real de la base se crea mediante Sequelize.
+-- Ejecutar:
+--   npx sequelize-cli db:migrate
+--   npx sequelize-cli db:seed:all
+--
+-- Tablas:
+-- roles
+-- usuarios
+-- categorias
+-- tareas
+--
+-- Relaciones:
+-- roles 1:N usuarios
+-- usuarios 1:N tareas
+-- categorias 1:N tareas
