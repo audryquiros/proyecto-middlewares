@@ -1,14 +1,28 @@
-# Backend
+# Proyecto Middlewares
 
-```bash
-npm install
-npm start
-```
+Backend REST con Node.js, Express, Sequelize y MySQL.
 
-API: http://localhost:3000
+## Requisitos
+- Node.js 20+
+- MySQL 8+
 
-Usuarios:
-- Ana / abc123 / admin
-- Luis / xyz789 / user
+## Instalación
+1. Crear la base de datos: `CREATE DATABASE proyecto_middlewares;`
+2. Copiar `.env.example` a `.env` y colocar las credenciales de MySQL.
+3. Ejecutar `npm install`.
+4. Ejecutar `npx sequelize-cli db:migrate`.
+5. Ejecutar `npx sequelize-cli db:seed:all`.
+6. Ejecutar `npm run dev`.
 
-La autenticación consulta la tabla usuarios y el rol mediante la tabla roles.
+## Login de prueba
+- admin@demo.com / 123456
+- usuario@demo.com / 123456
+
+## API
+- GET `/api/health`
+- POST `/api/auth/login`
+- GET `/api/tareas`
+- GET `/api/tareas/:id`
+- POST `/api/tareas`
+- PUT `/api/tareas/:id`
+- DELETE `/api/tareas/:id`

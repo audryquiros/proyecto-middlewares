@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const controller = require('../controllers/taskController');
+const auth = require('../middleware/auth');
+const validate = require('../middleware/validateTask');
+router.get('/', auth, controller.listar);
+router.get('/:id', auth, controller.obtener);
+router.post('/', auth, validate, controller.crear);
+router.put('/:id', auth, validate, controller.actualizar);
+router.delete('/:id', auth, controller.eliminar);
+module.exports = router;
